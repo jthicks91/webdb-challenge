@@ -1,0 +1,21 @@
+{
+  "name": "webdb-challenge",
+  "version": "1.0.0",
+  "description": "This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthicks91/webdb-challenge.git"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.17.2",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
