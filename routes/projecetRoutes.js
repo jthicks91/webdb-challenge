@@ -29,12 +29,13 @@ router.get("/:id", (req, res) => {
             res.status(200).json(projecets);
           })
           .catch(err =>
-            res
-              .status(500)
-              .json({ message: "There was an error on the servers side", err })
+            res.status(500).json({
+              message: "There was an error on the servers side. Unexpectedly. ",
+              err
+            })
           );
       } else {
-        res.status(404).json({ message: "User not found" });
+        res.status(404).json({ message: "User not found with that ID" });
       }
     })
     .catch(err => {

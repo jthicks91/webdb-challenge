@@ -17,11 +17,9 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   const { description, notes, project_id } = req.body;
   if (!notes || !description || !project_id) {
-    res
-      .status(404)
-      .json({
-        message: "Adding an action requires a description, notes, and projectId"
-      });
+    res.status(404).json({
+      message: "Adding an action requires a description, notes, and project_id"
+    });
   }
   try {
     const action = await db("actions").insert(req.body);
@@ -32,5 +30,6 @@ router.post("/", async (req, res) => {
       .json({ message: "This actions information could not be fetched" });
   }
 });
+
 
 module.exports = router;
